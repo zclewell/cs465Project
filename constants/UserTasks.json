@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Run two Miles",
+    "group": "Fitness Friends",
+    "completed": true
+  },
+  {
+    "title": "Finish Presentation",
+    "group": "Study Buddies",
+    "completed": true
+  },
+  {
+    "title": "Take out the Garbage",
+    "group": "Roomies",
+    "completed": false
+  },
+  {
+    "title": "Write Study Guide",
+    "group": "Study Buddies",
+    "completed": false
+  },
+]

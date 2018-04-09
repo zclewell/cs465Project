@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Run two Miles",
+    "group": "Fitness Friends",
+    "user": "Usain Bolt",
+    "completed": true
+  },
+  {
+    "title": "Finish Presentation",
+    "group": "Study Buddies",
+    "user": "Johhny Test",
+    "completed": true
+  },
+  {
+    "title": "Take out the Garbage",
+    "group": "Roomies",
+    "user": "Taylor Swift",
+    "completed": false
+  },
+  {
+    "title": "Write Study Guide",
+    "group": "Study Buddies",
+    "user": "Kanye West",
+    "completed": false
+  },
+]

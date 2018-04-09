@@ -1,0 +1,50 @@
+[
+	{
+		"name" : "Fitness Friends",
+		"rankings" : [
+			{
+				"name": "Usain Bolt"
+			},
+			{
+				"name": "Michael Phelps"
+			},
+			{
+				"name": "Shaun White"
+			}
+		],
+		"color" : "green"
+	
+	},
+	{
+		"name" : "Study Buddies",
+		"rankings" : [
+			{
+				"name": "Isaac Newton"
+			},
+			{
+				"name": "Alber Einstein"
+			},
+			{
+				"name": "Archimedes"
+			}
+		],
+		"color" : "blue"
+	
+	},
+	{
+		"name" : "Roomies",
+		"rankings" : [
+			{
+				"name": "Selena Gomez"
+			},
+			{
+				"name": "Katy Perry"
+			},
+			{
+				"name": "Taylor Swift"
+			}
+		],
+		"color" : "red"
+	
+	}
+]
