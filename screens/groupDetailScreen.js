@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default class GroupDetailScreen extends React.Component {
   render() {
     const { params } = this.props.navigation.state
+    const { navigate } = this.props.navigation
     let item = params ? params.item : null
     console.log(params)
     return (

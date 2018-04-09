@@ -6,10 +6,11 @@ export default class GroupCreateScreen extends React.Component {
   render() {
     const { params } = this.props.navigation.state
     let item = params ? params.item : null
+    let name = item ? item.name : 'null name'
     console.log(params)
     return (
       <View style={styles.container}>
-        <Text>{item.name}</Text>
+        <Text>{name}</Text>
       </View>
     );
   }

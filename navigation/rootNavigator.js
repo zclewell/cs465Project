@@ -1,7 +1,9 @@
 import { DrawerNavigator } from 'react-navigation'
+import React from 'react'
 
 import HomeNavigator from './homeNavigator'
 import GroupNavigator from './groupNavigator'
+import GroupScreen from '../screens/groupListScreen'
 
 const rootNavigator =  DrawerNavigator({
   Home: {
@@ -9,7 +11,7 @@ const rootNavigator =  DrawerNavigator({
   },
   Groups: {
   	screen: GroupNavigator
-  }
+  },
 });
 
 export default rootNavigator
