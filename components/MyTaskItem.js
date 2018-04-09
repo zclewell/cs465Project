@@ -1,23 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default class MyTaskItem extends React.Component {
   render() {
     let item = this.props.item
     let completed = item ? item.completed : false
     let completedText = completed ? 'completed' : 'in-progress'
+    let icon = completed ? <Icon name={'check'} style={{color: 'green', paddingRight: 10}} size={25}/> : <Icon name={'times'} style={{color: 'red', paddingRight: 15}} size={25}/>
     let title = item ? item.title : 'null title' 
     let group = item ? item.group: 'null group'
     return (
-      <View style={styles.container}>
-        <View style={styles.titleGroupContainer}>
-          <Text style={styles.title}>{title}</Text>
-          <Text style={styles.group}>{group}</Text>
-        </View>
-        <View style={styles.completedContainer}>
-          <Text>{completedText}</Text>
-        </View>
-      </View>
+          <TouchableOpacity onPress={() => {if(!completed) {this.props.onPress()}}}>
+            <View style={styles.container}>
+              <View style={styles.titleGroupContainer}>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.group}>{group}</Text>
+              </View>
+              <View style={styles.completedContainer}>
+                {icon}
+              </View>
+          </View>
+        </TouchableOpacity>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default class OtherTaskItem extends React.Component {
   render() {
@@ -13,11 +13,13 @@ export default class OtherTaskItem extends React.Component {
     let sentence = name + ' ' + completedText + ' ' + title + ' in ' + group
 
     return (
-      <View style={styles.container}>
-        <View style={styles.titleGroupContainer}>
-          <Text style={styles.title}>{sentence}</Text>
+      <TouchableOpacity onPress={() => {if(completed) {this.props.onPressComplete()} else {this.props.onPressIncomplete()}}}>
+        <View style={styles.container}>
+          <View style={styles.titleGroupContainer}>
+            <Text style={styles.title}>{sentence}</Text>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
