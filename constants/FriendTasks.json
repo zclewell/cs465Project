@@ -23,4 +23,28 @@
     "user": "Kanye West",
     "completed": false
   },
+    {
+    "title": "30 Minute Leg Workout",
+    "group": "Fitness Friends",
+    "user": "Chris Traiger",
+    "completed": true
+  },
+  {
+    "title": "Finish CS 438 MP",
+    "group": "Study Buddies",
+    "user": "Hermione Granger",
+    "completed": true
+  },
+  {
+    "title": "Run 7 Minute Mile",
+    "group": "Fitness Friends",
+    "user": "Ann Perkins",
+    "completed": false
+  },
+  {
+    "title": "Vacuum the Living Room",
+    "group": "Roomies",
+    "user": "Tom Haverford",
+    "completed": true
+  },
 ]
