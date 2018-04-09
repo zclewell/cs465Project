@@ -26,10 +26,15 @@ export default class FriendHomeScreen extends React.Component {
           height={0.6}
         >
           <View style={{flex: 4}}>
+            <View style={{margin: 10, flex: 1, borderWidth: 0.5, justifyContent: 'center', alignItems: 'center'}}>
+              <Text>{'Image proving task was completed'}</Text>
+            </View> 
           </View>
           <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <TouchableOpacity style={{backgroundColor: 'red', borderRadius: 100}}>
-              <Icon name={'thumbs-down'} style={{color: 'white', margin: 15}} size={25}/>
+              <View style={{alignItems: 'center', justifyContent: 'center', width: 25, height: 25, margin: 15}}>
+                <Icon name={'thumbs-down'} size={25} style={{ color: 'white'}}/>
+              </View>
             </TouchableOpacity>
           </View>
         </PopupDialog>
