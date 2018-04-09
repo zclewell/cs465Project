@@ -4,10 +4,10 @@ import { StyleSheet, Text, View } from 'react-native';
 export default class MyTaskItem extends React.Component {
   render() {
     let item = this.props.item
-    let completed = item? item.completed : false
-    let completedText = completed? 'completed' : 'in-progress'
-    let title = item? item.title : 'null title' 
-    let group = item? item.group: 'null group'
+    let completed = item ? item.completed : false
+    let completedText = completed ? 'completed' : 'in-progress'
+    let title = item ? item.title : 'null title' 
+    let group = item ? item.group: 'null group'
     return (
       <View style={styles.container}>
         <View style={styles.titleGroupContainer}>

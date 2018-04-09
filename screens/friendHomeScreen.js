@@ -1,13 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 
-export default class HomeScreen extends React.Component {
+import OtherTaskItem from '../components/OtherTaskItem.js'
+
+const friendTasks = require('../constants/FriendTasks')
+
+export default class FriendHomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>This is the FriendsHomeScreen</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <FlatList
+          data={friendTasks}
+          keyExtractor={(item, index) => item.key = item.title}
+          renderItem={({item}) => <OtherTaskItem item={item}/>}
+        />
       </View>
     );
   }
@@ -17,7 +23,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
