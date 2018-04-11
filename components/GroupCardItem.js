@@ -10,17 +10,15 @@ export default class GroupCardItem extends React.Component {
 
     const { navigate } = this.props.navigation
     return (
-      <TouchableOpacity onPress={() => navigate('Detail', {item: item})}>
-      <View style={styles.container}>
-        <View style={[styles.header,{backgroundColor: color}]}/>
-        <View style={styles.titleGroupContainer}>
-          <Text style={styles.title}>{name}</Text>
-          <Text style={styles.ranking}>{'1: '+rankings[0].name}</Text>
-          <Text style={styles.ranking}>{'2: '+rankings[1].name}</Text>
-          <Text style={styles.ranking}>{'3: '+rankings[2].name}</Text>
-        </View>
-      </View>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigate('Detail', {item: item})}>
+          <View style={styles.container}>
+            <View style={[styles.header,{backgroundColor: color, borderTopRightRadius: 10, borderTopLeftRadius: 10}]}/>
+              <Text style={styles.title}>{name}</Text>
+              <Text style={styles.ranking}>{'1: '+rankings[0].name}</Text>
+              <Text style={styles.ranking}>{'2: '+rankings[1].name}</Text>
+              <Text style={styles.ranking}>{'3: '+rankings[2].name}</Text>
+            </View>
+        </TouchableOpacity>
     );
   }
 }
@@ -32,7 +30,12 @@ const styles = StyleSheet.create({
     margin: 10,
     marginBottom: 0,
     elevation: 5,
-    height: 150
+    borderRadius: 10,
+  },
+  ranking: {
+    margin: 10,
+    marginTop: 0,
+    marginBottom: 5
   },
   title: {
     fontSize: 20,
@@ -45,7 +48,7 @@ const styles = StyleSheet.create({
     marginTop: 0
   },
   titleGroupContainer: {
-    flex: 2,
+    flex: 4,
   },
   completedContainer: {
     flex: 1,
@@ -53,6 +56,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   header: {
-    flex: 1,
+    height: 40
   }
 });

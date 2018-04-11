@@ -1,23 +1,8 @@
-import { StackNavigator } from 'react-navigation'
-import React from 'react';
+import React from 'react'
 import { View, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-import groupListScreen from '../screens/groupListScreen'
-import groupDetailScreen from '../screens/groupDetailScreen'
-import groupCreateScreen from '../screens/groupCreateScreen'
-
-const GroupNavigator =  StackNavigator({
-  Home: {
-    screen: groupListScreen,
-  },
-  Detail: {
-  	screen: groupDetailScreen
-  },
-  Create: {
-  	screen: groupCreateScreen
-  }
-});
+import HomeNavigator from '../navigation/homeNavigator'
 
 export default class HomeNavigatorWrapper extends React.Component {
   render() {
@@ -29,7 +14,7 @@ export default class HomeNavigatorWrapper extends React.Component {
       			<Icon name={'bars'} style={{fontSize: 30}}/>
       		</TouchableOpacity>
       	</View>
-        <GroupNavigator/>
+        <HomeNavigator/>
       </View>
     );
   }

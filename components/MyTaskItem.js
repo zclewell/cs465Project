@@ -5,13 +5,19 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 export default class MyTaskItem extends React.Component {
   render() {
     let item = this.props.item
-    let completed = item ? item.completed : false
-    let completedText = completed ? 'completed' : 'in-progress'
-    let icon = completed ? <Icon name={'check'} style={{color: 'green', paddingRight: 10}} size={25}/> : <Icon name={'times'} style={{color: 'red', paddingRight: 15}} size={25}/>
+    let status = item ? item.status : 'inprogress'
+    // let completed = item ? item.completed : false
+    // let completedText = completed ? 'completed' : 'in-progress'
+    let icon = <View/>
+    if(status == 'completed') {
+      icon = <Icon name={'check'} style={{color: 'green', paddingRight: 10}} size={25}/>
+    } else if (status == 'failed') {
+      icon =  <Icon name={'times'} style={{color: 'red', paddingRight: 15}} size={25}/>
+    }
     let title = item ? item.title : 'null title' 
     let group = item ? item.group: 'null group'
     return (
-          <TouchableOpacity onPress={() => {if(!completed) {this.props.onPress()}}}>
+          <TouchableOpacity onPress={() => {if(status == 'inprogress') {this.props.onPress()}}}>
             <View style={styles.container}>
               <View style={styles.titleGroupContainer}>
                 <Text style={styles.title}>{title}</Text>
@@ -33,7 +39,8 @@ const styles = StyleSheet.create({
     margin: 10,
     marginBottom: 0,
     elevation: 5,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    borderRadius: 10,
   },
   title: {
     fontSize: 20,

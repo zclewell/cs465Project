@@ -11,16 +11,19 @@ export default class OtherTaskItem extends React.Component {
     let name = item ? item.user : 'null name' 
 
     let sentence = name + ' ' + completedText + ' ' + title + ' in ' + group
-
+    if ((this.props.verified && item.verified) || (!this.props.verified && !item.verified)) {
     return (
-      <TouchableOpacity onPress={() => {if(completed) {this.props.onPressComplete()} else {this.props.onPressIncomplete()}}}>
-        <View style={styles.container}>
-          <View style={styles.titleGroupContainer}>
-            <Text style={styles.title}>{sentence}</Text>
+        <TouchableOpacity onPress={() => {if(item.verified) {this.props.onPressComplete()}}}>
+          <View style={styles.container}>
+            <View style={styles.titleGroupContainer}>
+              <Text style={styles.title}>{sentence}</Text>
+            </View>
           </View>
-        </View>
-      </TouchableOpacity>
-    );
+        </TouchableOpacity>
+      );
+    } else {
+      return null
+    }
   }
 }
 
@@ -29,9 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#eee',
     margin: 10,
-    marginBottom: 0,
+    marginTop: 0,
     elevation: 5,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    borderRadius: 10,
   },
   title: {
     fontSize: 20,

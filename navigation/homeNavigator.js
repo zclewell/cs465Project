@@ -14,9 +14,12 @@ const HomeNavigator =  TabNavigator({
   },
 },{
 	tabBarOptions: {
-		indicatorStyle: {backgroundColor: 'white'},
-		style: {paddingTop: 24, backgroundColor: 'orange'},
+		indicatorStyle: {backgroundColor: 'black'},
+		style: {backgroundColor: '#85d9bf'},
+		activeTintColor: 'black',
+		inactiveTintColor: '#626262',
 	}
 });
+
 
 export default HomeNavigator

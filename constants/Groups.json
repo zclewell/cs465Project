@@ -12,7 +12,29 @@
 				"name": "Shaun White"
 			}
 		],
-		"color" : "green"
+		"members" : [
+			{
+				"name": "Usain Bolt"
+			},
+			{
+				"name": "Michael Phelps"
+			},
+			{
+				"name": "Shaun White"
+			}
+		],
+		"challenges" : [
+			{
+				"name": "Run two Miles"
+			},
+			{
+				"name": "Run 7 Minute Mile"
+			},
+			{
+				"name": "30 Minute Leg Workout"
+			}
+		],
+		"color" : "#ffa448"
 	
 	},
 	{
@@ -22,13 +44,38 @@
 				"name": "Isaac Newton"
 			},
 			{
-				"name": "Alber Einstein"
+				"name": "Albert Einstein"
 			},
 			{
 				"name": "Archimedes"
 			}
 		],
-		"color" : "blue"
+		"members" : [
+			{
+				"name": "Isaac Newton"
+			},
+			{
+				"name": "Albert Einstein"
+			},
+			{
+				"name": "Archimedes"
+			},
+			{
+				"name": "Hermoine Grainger"
+			}
+		],
+		"challenges": [
+			{
+				"name": "Finish Presentation"
+			},
+			{
+				"name": "Write Study Guide"
+			},
+			{
+				"name": "Finish CS 438 MP"
+			}
+		],
+		"color" : "#7e00ff"
 	
 	},
 	{
@@ -44,7 +91,26 @@
 				"name": "Taylor Swift"
 			}
 		],
-		"color" : "red"
+		"members" : [
+			{
+				"name": "Selena Gomez"
+			},
+			{
+				"name": "Katy Perry"
+			},
+			{
+				"name": "Taylor Swift"
+			}
+		],
+		"challenges": [
+			{
+				"name": "Vacuum the Living Room"
+			},
+			{
+				"name": "Take out the Garbage"
+			}
+		],
+		"color" : "#c3ff87"
 	
 	}
 ]

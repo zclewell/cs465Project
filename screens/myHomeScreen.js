@@ -28,16 +28,21 @@ export default class MyHomeScreen extends React.Component {
         >
           <View style={{flex: 4}}>
             <View style={{margin: 10, flex: 1, borderWidth: 0.5, justifyContent: 'center', alignItems: 'center'}}>
-              <Text>{'Image proving task was completed'}</Text>
+              <Text>{'Preview of image proving task was completed'}</Text>
             </View> 
           </View>
           <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-            <TouchableOpacity style={{backgroundColor: 'red', borderRadius: 100, marginRight: 20}}>
+            <TouchableOpacity style={{backgroundColor: 'red', borderRadius: 100, margin: 20}}>
               <View style={{alignItems: 'center', justifyContent: 'center', width: 25, height: 25, margin: 15}}>
                 <Icon name={'times'} size={25} style={{ color: 'white'}}/>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity style={{backgroundColor: 'green', borderRadius: 100, marginLeft: 20}}>
+            <TouchableOpacity style={{backgroundColor: 'blue', borderRadius: 100, margin: 20}}>
+              <View style={{alignItems: 'center', justifyContent: 'center', width: 25, height: 25, margin: 15}}>
+                <Icon name={'plus'} size={25} style={{ color: 'white'}}/>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={{backgroundColor: 'green', borderRadius: 100, margin: 20}}>
               <View style={{alignItems: 'center', justifyContent: 'center', width: 25, height: 25, margin: 15}}>
                 <Icon name={'check'} size={25} style={{ color: 'white'}}/>
               </View>

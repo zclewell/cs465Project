@@ -3,48 +3,56 @@
     "title": "Run two Miles",
     "group": "Fitness Friends",
     "user": "Usain Bolt",
-    "completed": true
+    "completed": true,
+    "verified": true
   },
   {
     "title": "Finish Presentation",
     "group": "Study Buddies",
     "user": "Johhny Test",
-    "completed": true
+    "completed": true,
+    "verified": false
   },
   {
     "title": "Take out the Garbage",
     "group": "Roomies",
     "user": "Taylor Swift",
-    "completed": false
+    "completed": false,
+    "verified": true
   },
   {
     "title": "Write Study Guide",
     "group": "Study Buddies",
     "user": "Kanye West",
-    "completed": false
+    "completed": false,
+    "verified": true
   },
     {
     "title": "30 Minute Leg Workout",
     "group": "Fitness Friends",
     "user": "Chris Traiger",
-    "completed": true
+    "completed": true,
+    "verified": true
   },
   {
     "title": "Finish CS 438 MP",
     "group": "Study Buddies",
     "user": "Hermione Granger",
-    "completed": true
+    "completed": true,
+    "verified": false
   },
   {
     "title": "Run 7 Minute Mile",
     "group": "Fitness Friends",
     "user": "Ann Perkins",
-    "completed": false
+    "completed": false,
+    "verified": true
   },
   {
     "title": "Vacuum the Living Room",
     "group": "Roomies",
     "user": "Tom Haverford",
-    "completed": true
+    "completed": true,
+    "verified": true
   },
 ]

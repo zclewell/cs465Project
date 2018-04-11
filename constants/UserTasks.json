@@ -1,22 +1,42 @@
 [
   {
-    "title": "Run two Miles",
-    "group": "Fitness Friends",
-    "completed": true
-  },
-  {
     "title": "Finish Presentation",
     "group": "Study Buddies",
-    "completed": true
+    "status": "failed"
+  },
+  {
+    "title": "Run two Miles",
+    "group": "Fitness Friends",
+    "status": "completed"
   },
   {
     "title": "Take out the Garbage",
     "group": "Roomies",
-    "completed": false
+    "status": "completed"
   },
   {
     "title": "Write Study Guide",
     "group": "Study Buddies",
-    "completed": false
+    "status": "inprogress"
+  },  
+  {
+    "title": "30 Minute Leg Workout",
+    "group": "Fitness Friends",
+    "status": "inprogress"
+  },
+  {
+    "title": "Finish CS 438 MP",
+    "group": "Study Buddies",
+    "status": "inprogress"
+  },
+  {
+    "title": "Run 7 Minute Mile",
+    "group": "Fitness Friends",
+    "status": "inprogress"
+  },
+  {
+    "title": "Vacuum the Living Room",
+    "group": "Roomies",
+    "status": "inprogress"
   },
 ]
