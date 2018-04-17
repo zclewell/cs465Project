@@ -39,4 +39,24 @@
     "group": "Roomies",
     "status": "inprogress"
   },
+  {
+    "title": "30 Minute Leg Workout",
+    "group": "Fitness Friends",
+    "completed": true
+  },
+  {
+    "title": "Finish CS 438 MP",
+    "group": "Study Buddies",
+    "completed": true
+  },
+  {
+    "title": "Run 7 Minute Mile",
+    "group": "Fitness Friends",
+    "completed": false
+  },
+  {
+    "title": "Vacuum the Living Room",
+    "group": "Roomies",
+    "completed": true
+  },
 ]
