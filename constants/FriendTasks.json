@@ -6,7 +6,7 @@
     "completed": true,
     "verified": false,
     "userUpvote": null,
-    "id": 8
+    "id": 0
   },
   {
     "title": "Run two Miles",
@@ -15,7 +15,7 @@
     "completed": true,
     "verified": true,
     "userUpvote": null,
-    "id": 0,
+    "id": 1,
   },
   {
     "title": "Finish Presentation",
@@ -24,7 +24,7 @@
     "completed": true,
     "verified": false,
     "userUpvote": null,
-    "id": 1
+    "id": 2
   },
   {
     "title": "Take out the Garbage",
@@ -33,7 +33,7 @@
     "completed": false,
     "verified": true,
     "userUpvote": null,
-    "id": 2
+    "id": 3
   },
   {
     "title": "Write Study Guide",
@@ -42,7 +42,7 @@
     "completed": false,
     "verified": true,
     "userUpvote": null,
-    "id": 3
+    "id": 4
   },
     {
     "title": "30 Minute Leg Workout",
@@ -51,7 +51,7 @@
     "completed": true,
     "verified": true,
     "userUpvote": null,
-    "id": 4
+    "id": 5
   },
   {
     "title": "Finish CS 438 MP",
@@ -60,7 +60,7 @@
     "completed": true,
     "verified": false,
     "userUpvote": null,
-    "id": 5
+    "id": 6
   },
   {
     "title": "Run 7 Minute Mile",
@@ -69,7 +69,7 @@
     "completed": false,
     "verified": true,
     "userUpvote": null,
-    "id": 6
+    "id": 7
   },
   {
     "title": "Vacuum the Living Room",
@@ -78,6 +78,6 @@
     "completed": true,
     "verified": true,
     "userUpvote": null,
-    "id": 7
+    "id": 8
   },
 ]

@@ -37,6 +37,7 @@ export default class GroupCreateScreen extends React.Component {
             data={this.state.members}
             keyExtractor={(item, index) => item.key = ''+index}
             renderItem={({item}) => <Text style={{margin: 5,marginBottom: 0, flex: 4}}>{item.name}</Text>}
+            extraData={this.state}
           />
         </View>
         <View style={{flex: 1, margin: 5, borderRadius: 10,backgroundColor: '#eee'}}>
@@ -47,6 +48,7 @@ export default class GroupCreateScreen extends React.Component {
             data={this.state.challenges}
             keyExtractor={(item, index) => item.key = ''+index}
             renderItem={({item}) => <Text style={{margin: 5,marginBottom: 0, flex: 4}}>{item.name}</Text>}
+            extraData={this.state}
           />
         </View>
         <ActionButton icon={<Icon name='pencil' size={25} style={{color:  'white'}}/>} buttonColor="rgba(231,76,60,1)" onPress={() => this.props.navigation.navigate('Create',{item: item})}/>

@@ -12,8 +12,8 @@ export default class GroupCreateScreen extends React.Component {
   constructor(props) {
     super(props)
     const { params } = this.props.navigation.state
-    let memberArr = params ? params.item.members : [{name: 'user1'},{name: 'user2'},{name: 'user3'},{name: 'user4'}]
-    let challengeArr = params ? params.item.challenges : [{name: 'challenge1'},{name: 'challenge2'},{name: 'challenge3'},{name: 'challenge4'}]
+    let memberArr = params ? params.item.members : []
+    let challengeArr = params ? params.item.challenges : []
     let name = params ? params.item.name : ''
     this.state = {
       name: name,
@@ -43,6 +43,7 @@ export default class GroupCreateScreen extends React.Component {
               style={{margin: 5,flex:1}}
               onChangeText={(text) => this.setState({tempMember: text})}
               value={this.state.tempMember}
+              onSubmitEditing={() => this.addToMembers()}
             />
             <TouchableOpacity onPress={() => this.addToMembers()}>
               <Icon name={'plus'} style={{fontSize: 20, width: 20, height: 20, margin: 10}}/>
@@ -54,13 +55,14 @@ export default class GroupCreateScreen extends React.Component {
             renderItem={({item}) => 
               <View style={{flexDirection: 'row'}}>
                 <Text style={{margin: 5,marginBottom: 0, flex: 4}}>{item.name}</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.removeFromMembers(item.name)}>
                   <View style={{alignItems: 'center', justifyContent: 'center', height: 20,width: 20, margin: 5}}>
                     <Icon name={'times'} style={{fontSize: 20}}/>
                   </View>
                 </TouchableOpacity>
               </View>
             }
+            extraData={this.state}
           />
         </View>
         <View style={{flex: 1, margin: 5, borderRadius: 10,backgroundColor: '#eee'}}>
@@ -70,7 +72,8 @@ export default class GroupCreateScreen extends React.Component {
               placeholderTextColor='#626262'
               style={{margin: 5, flex: 1}}
               onChangeText={(text) => this.setState({tempChallenge: text})}
-              value={this.state.tempChallenge}
+              value={this.state}
+              onSubmitEditing={() => this.addToChallenges()}
             />
             <TouchableOpacity onPress={() => this.addToChallenges()}>
               <Icon name={'plus'} style={{fontSize: 20, width: 20, height: 20, margin: 10}}/>
@@ -82,13 +85,14 @@ export default class GroupCreateScreen extends React.Component {
             renderItem={({item}) => 
               <View style={{flexDirection: 'row'}}>
                 <Text style={{margin: 5,marginBottom: 0, flex: 4}}>{item.name}</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.removeFromChallenges(item.name)}>
                   <View style={{alignItems: 'center', justifyContent: 'center', height: 20,width: 20, margin: 5}}>
                     <Icon name={'times'} style={{fontSize: 20}}/>
                   </View>
                 </TouchableOpacity>
               </View>
             }
+            extraData={this.state}
           />
         </View>
       </View>
@@ -98,6 +102,8 @@ export default class GroupCreateScreen extends React.Component {
   addToMembers() {
     currMembers = this.state.members
     currMembers.push({name: this.state.tempMember})
+    console.log(currMembers)
+    this.state.members = currMembers
     this.setState({members: currMembers, tempMember: ''})
     console.log(this.state)
   }
@@ -106,6 +112,15 @@ export default class GroupCreateScreen extends React.Component {
     currChallenges = this.state.challenges
     currChallenges.push({name: this.state.tempChallenge})
     this.setState({challenges: currChallenges, tempChallenge: ''})
+  }
+
+  removeFromMembers(name) {
+    currMembers = this.state.members
+    newMembers = []
+    currMembers.forEach(function(curr) {if(curr.name !== name) { newMembers.push(curr)}})
+    console.log(newMembers)
+    this.state.members = newMembers
+    this.setState({members: newMembers})
   }
 }
 

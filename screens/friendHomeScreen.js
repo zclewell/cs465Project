@@ -11,10 +11,10 @@ const slideAnimation = new SlideAnimation({
 });
 
 const photos = {
-  0: require('../assets/images/usain.jpg'), 
-  4: require('../assets/images/chris.jpg'),
-  7: require('../assets/images/tom.png'),
-  8: require('../assets/images/chad.jpg')
+  1: require('../assets/images/usain.jpg'), 
+  5: require('../assets/images/chris.jpg'),
+  8: require('../assets/images/tom.png'),
+  0: require('../assets/images/chad.jpg')
 }
 
 export default class FriendHomeScreen extends React.Component {
@@ -84,7 +84,6 @@ export default class FriendHomeScreen extends React.Component {
       currId = this.state.currId
       tasks[currId].userUpvote = this.state.upVote
       this.setState({tasks: tasks})
-      console.log(this.state.upVote)
     }
 
     upVotePress() {
