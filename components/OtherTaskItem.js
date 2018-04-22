@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default class OtherTaskItem extends React.Component {
   render() {
@@ -9,14 +10,20 @@ export default class OtherTaskItem extends React.Component {
     let title = item ? item.title : 'null title' 
     let group = item ? item.group : 'null group'
     let name = item ? item.user : 'null name' 
-
+    let userUpvote = item ? item.userUpvote : null
+    let id = item ? item.id : -1
     let sentence = name + ' ' + completedText + ' ' + title + ' in ' + group
+
     if ((this.props.verified && item.verified) || (!this.props.verified && !item.verified)) {
     return (
-        <TouchableOpacity onPress={() => {if(item.verified) {this.props.onPressComplete()}}}>
+        <TouchableOpacity onPress={() => completed ? this.props.onPress(id,item) : null}>
           <View style={styles.container}>
             <View style={styles.titleGroupContainer}>
               <Text style={styles.title}>{sentence}</Text>
+            </View>
+            <View style={{justifyContent: 'center',alignItems: 'center', flex: 1}}>
+                {(completed && userUpvote != null && userUpvote) ? <Icon style={{color: 'green', margin: 10}} name={'thumbs-up'}/> : null}
+                {(completed && userUpvote != null && !userUpvote) ? <Icon style={{color: 'red', margin: 10}} name={'thumbs-down'}/> : null}
             </View>
           </View>
         </TouchableOpacity>
@@ -42,7 +49,7 @@ const styles = StyleSheet.create({
     margin: 5
   },
   titleGroupContainer: {
-    flex: 3,
+    flex: 7,
   },
   completedContainer: {
     flex: 1,

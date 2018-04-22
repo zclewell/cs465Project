@@ -1,58 +1,83 @@
 [
+  { 
+    "title": "Deadlift MAX",
+    "group": "Fitness Friends",
+    "user": "Chad",
+    "completed": true,
+    "verified": false,
+    "userUpvote": null,
+    "id": 8
+  },
   {
     "title": "Run two Miles",
     "group": "Fitness Friends",
     "user": "Usain Bolt",
     "completed": true,
-    "verified": true
+    "verified": true,
+    "userUpvote": null,
+    "id": 0,
   },
   {
     "title": "Finish Presentation",
     "group": "Study Buddies",
     "user": "Johhny Test",
     "completed": true,
-    "verified": false
+    "verified": false,
+    "userUpvote": null,
+    "id": 1
   },
   {
     "title": "Take out the Garbage",
     "group": "Roomies",
     "user": "Taylor Swift",
     "completed": false,
-    "verified": true
+    "verified": true,
+    "userUpvote": null,
+    "id": 2
   },
   {
     "title": "Write Study Guide",
     "group": "Study Buddies",
     "user": "Kanye West",
     "completed": false,
-    "verified": true
+    "verified": true,
+    "userUpvote": null,
+    "id": 3
   },
     {
     "title": "30 Minute Leg Workout",
     "group": "Fitness Friends",
     "user": "Chris Traiger",
     "completed": true,
-    "verified": true
+    "verified": true,
+    "userUpvote": null,
+    "id": 4
   },
   {
     "title": "Finish CS 438 MP",
     "group": "Study Buddies",
     "user": "Hermione Granger",
     "completed": true,
-    "verified": false
+    "verified": false,
+    "userUpvote": null,
+    "id": 5
   },
   {
     "title": "Run 7 Minute Mile",
     "group": "Fitness Friends",
     "user": "Ann Perkins",
     "completed": false,
-    "verified": true
+    "verified": true,
+    "userUpvote": null,
+    "id": 6
   },
   {
     "title": "Vacuum the Living Room",
     "group": "Roomies",
     "user": "Tom Haverford",
     "completed": true,
-    "verified": true
+    "verified": true,
+    "userUpvote": null,
+    "id": 7
   },
 ]

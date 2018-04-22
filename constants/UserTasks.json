@@ -2,41 +2,49 @@
   {
     "title": "Finish Presentation",
     "group": "Study Buddies",
-    "status": "failed"
+    "status": "failed",
+    "userUpvote": true
   },
   {
     "title": "Run two Miles",
     "group": "Fitness Friends",
-    "status": "completed"
+    "status": "completed",
+    "userUpvote": null
   },
   {
     "title": "Take out the Garbage",
     "group": "Roomies",
-    "status": "completed"
+    "status": "completed",
+    "userUpvote": false
   },
   {
     "title": "Write Study Guide",
     "group": "Study Buddies",
-    "status": "inprogress"
+    "status": "inprogress",
+    "userUpvote": false
   },  
   {
     "title": "30 Minute Leg Workout",
     "group": "Fitness Friends",
-    "status": "inprogress"
+    "status": "inprogress",
+    "userUpvote": null
   },
   {
     "title": "Finish CS 438 MP",
     "group": "Study Buddies",
-    "status": "inprogress"
+    "status": "inprogress",
+    "userUpvote": true
   },
   {
     "title": "Run 7 Minute Mile",
     "group": "Fitness Friends",
-    "status": "inprogress"
+    "status": "inprogress",
+    "userUpvote": null
   },
   {
     "title": "Vacuum the Living Room",
     "group": "Roomies",
-    "status": "inprogress"
+    "status": "inprogress",
+    "userUpvote": null
   },
 ]

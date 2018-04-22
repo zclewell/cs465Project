@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default class GroupCardItem extends React.Component {
   render() {
@@ -14,9 +15,24 @@ export default class GroupCardItem extends React.Component {
           <View style={styles.container}>
             <View style={[styles.header,{backgroundColor: color, borderTopRightRadius: 10, borderTopLeftRadius: 10}]}/>
               <Text style={styles.title}>{name}</Text>
-              <Text style={styles.ranking}>{'1: '+rankings[0].name}</Text>
-              <Text style={styles.ranking}>{'2: '+rankings[1].name}</Text>
-              <Text style={styles.ranking}>{'3: '+rankings[2].name}</Text>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{justifyContent: 'center',alignItems: 'center'}}>
+                  <Icon style={{color: '#D4AF37', margin: 5, fontSize: 15}} name={'trophy'}/>
+                </View>
+                <Text style={styles.ranking}>{rankings[0].name}</Text>
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{justifyContent: 'center',alignItems: 'center'}}>
+                  <Icon style={{color: '#c0c0c0', margin: 5, fontSize: 15}} name={'trophy'}/>
+                </View>
+                <Text style={styles.ranking}>{rankings[1].name}</Text>
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{justifyContent: 'center',alignItems: 'center'}}>
+                  <Icon style={{color: '#CD7F32', margin: 5, fontSize: 15}} name={'trophy'}/>
+                </View>
+                <Text style={styles.ranking}>{rankings[2].name}</Text>
+              </View>
             </View>
         </TouchableOpacity>
     );
