@@ -11,7 +11,7 @@ export default class GroupCardItem extends React.Component {
 
     const { navigate } = this.props.navigation
     return (
-        <TouchableOpacity onPress={() => navigate('Detail', {item: item, addToGroups: this.props.addToGroups})}>
+        <TouchableOpacity onPress={() => navigate('Detail', {item: item, manipulationFunctions: this.props.manipulationFunctions})}>
           <View style={styles.container}>
             <View style={[styles.header,{backgroundColor: color, borderTopRightRadius: 10, borderTopLeftRadius: 10}]}/>
               <Text style={styles.title}>{name}</Text>

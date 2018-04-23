@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList, TextInput, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+import ActionButton from 'react-native-action-button';
+
 export default class GroupCreateScreen extends React.Component {
   static navigationOptions = {
     headerStyle: {
@@ -12,15 +14,18 @@ export default class GroupCreateScreen extends React.Component {
   constructor(props) {
     super(props)
     const { params } = this.props.navigation.state
-    let memberArr = params ? params.item.members : []
-    let challengeArr = params ? params.item.challenges : []
-    let name = params ? params.item.name : ''
+    let item = params.item ? params.item : null
+    let memberArr = item ? item.members : []
+    let challengeArr = item ? item.challenges : []
+    let name = item ? item.name : ''
+    let id = item ? item.id : -1
     this.state = {
       name: name,
       members: memberArr,
       challenges: challengeArr,
       tempChallenge: '',
       tempMember: '',
+      id: id
     }
   }
   render() {
@@ -72,7 +77,7 @@ export default class GroupCreateScreen extends React.Component {
               placeholderTextColor='#626262'
               style={{margin: 5, flex: 1}}
               onChangeText={(text) => this.setState({tempChallenge: text})}
-              value={this.state}
+              value={this.state.tempChallenge}
               onSubmitEditing={() => this.addToChallenges()}
             />
             <TouchableOpacity onPress={() => this.addToChallenges()}>
@@ -95,32 +100,64 @@ export default class GroupCreateScreen extends React.Component {
             extraData={this.state}
           />
         </View>
+        {item == null ? <ActionButton buttonColor="rgba(231,76,60,1)" renderIcon={() => <Icon name='check' size={25} style={{color: 'white'}}/>} onPress={() => {this.createGroup(); this.props.navigation.navigate('Home')}}/> : null }
       </View>
     );
   }
 
   addToMembers() {
-    currMembers = this.state.members
-    currMembers.push({name: this.state.tempMember})
-    console.log(currMembers)
-    this.state.members = currMembers
-    this.setState({members: currMembers, tempMember: ''})
-    console.log(this.state)
+    if( this.props.navigation.state.params.setMembers) {
+      this.props.navigation.state.params.manipulationFunctions.addMemberToGroup(this.state.id, this.state.tempMember)
+      this.props.navigation.state.params.setMembers(this.state.members)
+    } else {
+      newMembers = this.state.members
+      newMembers.push({name: this.state.tempMember})
+      this.state.members = newMembers
+    }
+    this.setState({tempMember: ''})
   }
 
   addToChallenges() {
-    currChallenges = this.state.challenges
-    currChallenges.push({name: this.state.tempChallenge})
-    this.setState({challenges: currChallenges, tempChallenge: ''})
+    if(this.props.navigation.state.params.setChallenges) {
+      this.props.navigation.state.params.manipulationFunctions.addChallengeToGroup(this.state.id, this.state.tempChallenge)
+      this.props.navigation.state.params.setChallenges(this.state.challenges) 
+    } else {
+      newChallenges = this.state.challenges
+      newChallenges.push({name: this.state.tempChallenge})
+      this.state.challenges = newChallenges
+    }
+    this.setState({tempChallenge: ''})
   }
 
   removeFromMembers(name) {
     currMembers = this.state.members
     newMembers = []
     currMembers.forEach(function(curr) {if(curr.name !== name) { newMembers.push(curr)}})
-    console.log(newMembers)
     this.state.members = newMembers
     this.setState({members: newMembers})
+    this.props.navigation.state.params.manipulationFunctions.removeMemberFromGroup(this.state.id, name)
+    this.props.navigation.state.params.setMembers(this.state.members)
+  }
+
+  removeFromChallenges(name) {
+    currChallenges = this.state.challenges
+    newChallenges = []
+    currChallenges.forEach(function(curr) { if(curr.name !== name) { newChallenges.push(curr)}})
+    this.setState({challenges: newChallenges})
+    this.props.navigation.state.params.manipulationFunctions.removeChallengeFromGroup(this.state.id, name)
+    this.props.navigation.state.params.setChallenges(newChallenges)
+  }
+
+  createGroup() {
+    newGroup = {
+      id: Math.random(),
+      name: this.state.name,
+      members: this.state.members,
+      challenges: this.state.challenges,
+      color: '#'+Math.floor(Math.random()*16777215).toString(16),
+      rankings: ['','','']
+    }
+    this.props.navigation.state.params.manipulationFunctions.addToGroups(newGroup)
   }
 }
 

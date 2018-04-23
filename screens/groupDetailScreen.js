@@ -25,7 +25,6 @@ export default class GroupCreateScreen extends React.Component {
     const { params } = this.props.navigation.state
     let item = params ? params.item : null
     let name = item ? item.name : ''
-    // console.log(this.state)
     return (
       <View style={styles.container}>
         <Text style={styles.title}>{name}</Text>
@@ -51,22 +50,25 @@ export default class GroupCreateScreen extends React.Component {
             extraData={this.state}
           />
         </View>
-        <ActionButton icon={<Icon name='pencil' size={25} style={{color:  'white'}}/>} buttonColor="rgba(231,76,60,1)" onPress={() => this.props.navigation.navigate('Create',{item: item})}/>
+        <ActionButton 
+          renderIcon={() => <Icon name='pencil' size={25} style={{color: 'white'}}/>}
+          buttonColor="rgba(231,76,60,1)" 
+          onPress={() => this.props.navigation.navigate('Create',{item: item, manipulationFunctions: this.props.navigation.state.params.manipulationFunctions, setMembers: this.setMembers.bind(this), setChallenges: this.setChallenges.bind(this)})}
+        />
       </View>
     );
   }
 
-  addToMembers() {
-    currMembers = this.state.members
-    currMembers.push({name: this.state.tempMember})
-    this.setState({members: currMembers, tempMember: ''})
-    console.log(this.state)
+  setMembers(members) {
+    this.setState({members: members})
+    this.state.members = members
+    // console.log(this.state.members)
   }
 
-  addToChallenges() {
-    currChallenges = this.state.challenges
-    currChallenges.push({name: this.state.tempChallenge})
-    this.setState({challenges: currChallenges, tempChallenge: ''})
+  setChallenges(challenges) {
+    this.setState({challenges: challenges})
+    this.state.challenges = challenges
+    console.log(challenges)
   }
 }
 

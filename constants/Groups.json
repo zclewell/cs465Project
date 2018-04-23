@@ -1,5 +1,6 @@
 [
 	{
+		"id": 0,
 		"name" : "Fitness Friends",
 		"rankings" : [
 			{
@@ -38,6 +39,7 @@
 	
 	},
 	{
+		"id": 1,
 		"name" : "Study Buddies",
 		"rankings" : [
 			{
@@ -79,6 +81,7 @@
 	
 	},
 	{
+		"id": 2,
 		"name" : "Roomies",
 		"rankings" : [
 			{
