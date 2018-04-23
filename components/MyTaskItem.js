@@ -17,7 +17,7 @@ export default class MyTaskItem extends React.Component {
     let title = item ? item.title : 'null title' 
     let group = item ? item.group: 'null group'
     return (
-          <TouchableOpacity onPress={() => {if(status == 'inprogress') {this.props.onPress()}}}>
+          <TouchableOpacity onPress={() => {if(status == 'inprogress') {this.props.onPress(item)}}}>
             <View style={styles.container}>
               <View style={styles.titleGroupContainer}>
                 <Text style={styles.title}>{title}</Text>

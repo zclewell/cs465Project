@@ -4,7 +4,7 @@
 		"name" : "Fitness Friends",
 		"rankings" : [
 			{
-				"name": "Usain Bolt"
+				"name": "You"
 			},
 			{
 				"name": "Michael Phelps"
@@ -43,7 +43,7 @@
 		"name" : "Study Buddies",
 		"rankings" : [
 			{
-				"name": "Isaac Newton"
+				"name": "You"
 			},
 			{
 				"name": "Albert Einstein"
@@ -88,7 +88,7 @@
 				"name": "Selena Gomez"
 			},
 			{
-				"name": "Katy Perry"
+				"name": "You"
 			},
 			{
 				"name": "Taylor Swift"
