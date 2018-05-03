@@ -15,6 +15,7 @@ export default class GroupCardItem extends React.Component {
           <View style={styles.container}>
             <View style={[styles.header,{backgroundColor: color, borderTopRightRadius: 10, borderTopLeftRadius: 10}]}/>
               <Text style={styles.title}>{name}</Text>
+              <Text style={styles.ranking}>{'Leaderboard:'}</Text>
               <View style={{flexDirection: 'row'}}>
                 <View style={{justifyContent: 'center',alignItems: 'center'}}>
                   <Icon style={{color: '#D4AF37', margin: 5, fontSize: 15}} name={'trophy'}/>

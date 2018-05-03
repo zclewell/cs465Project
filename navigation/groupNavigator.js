@@ -29,7 +29,9 @@ export default class HomeNavigatorWrapper extends React.Component {
       			<Icon name={'bars'} style={{fontSize: 30}}/>
       		</TouchableOpacity>
       	</View>
-        <GroupNavigator/>
+        <View style={{flex: 1, marginBottom: 10}}>
+          <GroupNavigator/>
+        </View>
       </View>
     );
   }

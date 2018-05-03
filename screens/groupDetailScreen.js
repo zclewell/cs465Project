@@ -25,9 +25,33 @@ export default class GroupCreateScreen extends React.Component {
     const { params } = this.props.navigation.state
     let item = params ? params.item : null
     let name = item ? item.name : ''
+    let rankings = item.rankings
     return (
       <View style={styles.container}>
         <Text style={styles.title}>{name}</Text>
+        <View style={{margin: 5, borderRadius: 10}}>
+          <View style={{backgroundColor: '#85d9bf', flexDirection: 'row', borderTopRightRadius: 10, borderTopLeftRadius: 10}}>
+            <Text style={styles.listTitle}>{'Leaderboard'}</Text>  
+          </View>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{justifyContent: 'center',alignItems: 'center'}}>
+                  <Icon style={{color: '#D4AF37', margin: 5, fontSize: 15}} name={'trophy'}/>
+                </View>
+                <Text>{rankings[0].name}</Text>
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{justifyContent: 'center',alignItems: 'center'}}>
+                  <Icon style={{color: '#c0c0c0', margin: 5, fontSize: 15}} name={'trophy'}/>
+                </View>
+                <Text style={styles.ranking}>{rankings[1].name}</Text>
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{justifyContent: 'center',alignItems: 'center'}}>
+                  <Icon style={{color: '#CD7F32', margin: 5, fontSize: 15}} name={'trophy'}/>
+                </View>
+                <Text style={styles.ranking}>{rankings[2].name}</Text>
+              </View>
+        </View>
         <View style={{flex: 1, margin: 5, borderRadius: 10}}>
           <View style={{backgroundColor: '#85d9bf', flexDirection: 'row', borderTopRightRadius: 10, borderTopLeftRadius: 10}}>
             <Text style={styles.listTitle}>{'Members'}</Text>  
